@@ -1,0 +1,8 @@
+archived_logs
+latest_logs
+assets
+__pycache__
+.idea
+#img/*.png
+Logs/*.log
+venv
