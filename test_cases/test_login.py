@@ -75,6 +75,5 @@ class Login_page(unittest.TestCase):
             login_page.save_img(sys._getframe().f_code.co_name)
             login_page.login_success_asset(self.Sign_in)
 
-
 if __name__ == "__main__":
     unittest.main()
