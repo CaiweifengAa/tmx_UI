@@ -36,7 +36,10 @@ class BaseTestCase(BaseCase):
     # 通过title断言进入的页面是否正确。
     # 使用title获取当前窗口title，检查输入的title是否在当前title中，返回比较结果（True 或 False）
     def on_page(self, title):
-        return title in self.driver.title
+        try:
+            return title in self.driver.title
+        except:
+            logs.error("当前当前窗口页面的title错误")
 
     # 打开页面，并校验页面链接是否加载正确
     # 以单下划线_开头的方法，在使用import *时，该方法不会被导入，保证该方法为类私有的。
@@ -87,5 +90,8 @@ class BaseTestCase(BaseCase):
             print(u"%s 页面中未能找到 %s 元素" % (self, loc))
 
     def save_img(self, img_name):
-        self.driver.get_screenshot_as_file(
-            '{}/{}.png'.format(os.path.abspath(readconfig.img_path), img_name))
+        try:
+            self.driver.get_screenshot_as_file('{}/{}.png'.format(readconfig.img_path, img_name))
+            logs.info(img_name + '：已截取屏幕截图')
+        except AttributeError:
+            logs.error(img_name + ':截取屏幕截图失败')

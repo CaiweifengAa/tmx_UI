@@ -4,5 +4,5 @@ assets
 __pycache__
 .idea
 #img/*.png
-#Logs/*.log
+*.log
 venv
