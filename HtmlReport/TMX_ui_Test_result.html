@@ -7128,91 +7128,30 @@
 </script>
 <script type="text/javascript">
     var resultData = {
-    "testPass": 3,
+    "testPass": 0,
     "testResult": [
         {
-            "className": "Login_page",
-            "methodName": "test_01_login_success",
-            "description": "输入正常的用户名和密码登录成功",
-            "spendTime": "79.9 s",
+            "className": "_FailedTest",
+            "methodName": "test_login",
+            "description": null,
+            "spendTime": "0.0 s",
             "status": "失败",
             "log": [
-                "[2021-04-28 15:35:53,660] - logger.py] - INFO: 截取当前屏幕截图:test_01_login_success\n[2021-04-28 15:35:53,663] - logger.py] - ERROR: 用例:test_01_login_success执行失败\n",
-                "Traceback (most recent call last):\n",
-                "  File \"D:\\04_TMXtest\\03_UItest\\tmx_UI\\mon\\base_case.py\", line 43, in find_element\n    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))\n",
-                "  File \"D:\\02_software\\Python38\\lib\\site-packages\\selenium\\webdriver\\support\\wait.py\", line 80, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
-                "selenium.common.exceptions.TimeoutException: Message: \n\n",
-                "\nDuring handling of the above exception, another exception occurred:\n\n",
-                "Traceback (most recent call last):\n",
-                "  File \"D:\\04_TMXtest\\03_UItest\\tmx_UI\\test_cases\\test_login.py\", line 55, in test_01_login_success\n    login_page.login_success_asset(self.login_success_asset)\n",
-                "  File \"D:\\04_TMXtest\\03_UItest\\tmx_UI\\pages\\LoginPage.py\", line 57, in login_success_asset\n    assert message in self.find_element(*self.login_message_loc).text\n",
-                "  File \"D:\\04_TMXtest\\03_UItest\\tmx_UI\\mon\\base_case.py\", line 46, in find_element\n    logs.error(u\"%s 页面中未能找到 %s 元素\" % (self, loc))\n",
-                "  File \"D:\\02_software\\Python38\\lib\\unittest\\case.py\", line 548, in __str__\n    return \"%s (%s)\" % (self._testMethodName, strclass(self.__class__))\n",
-                "AttributeError: 'loginPage' object has no attribute '_testMethodName'\n",
-                "\nDuring handling of the above exception, another exception occurred:\n\n",
-                "Traceback (most recent call last):\n",
-                "  File \"D:\\04_TMXtest\\03_UItest\\tmx_UI\\mon\\base_case.py\", line 43, in find_element\n    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))\n",
-                "  File \"D:\\02_software\\Python38\\lib\\site-packages\\selenium\\webdriver\\support\\wait.py\", line 80, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
-                "selenium.common.exceptions.TimeoutException: Message: \n\n",
-                "\nDuring handling of the above exception, another exception occurred:\n\n",
-                "Traceback (most recent call last):\n",
-                "  File \"D:\\02_software\\Python38\\lib\\site-packages\\BeautifulReport\\BeautifulReport.py\", line 416, in __wrap\n    result = func(*args, **kwargs)\n",
-                "  File \"D:\\04_TMXtest\\03_UItest\\tmx_UI\\test_cases\\test_login.py\", line 61, in test_01_login_success\n    login_page.login_success_asset(self.login_success_asset)\n",
-                "  File \"D:\\04_TMXtest\\03_UItest\\tmx_UI\\pages\\LoginPage.py\", line 57, in login_success_asset\n    assert message in self.find_element(*self.login_message_loc).text\n",
-                "  File \"D:\\04_TMXtest\\03_UItest\\tmx_UI\\mon\\base_case.py\", line 46, in find_element\n    logs.error(u\"%s 页面中未能找到 %s 元素\" % (self, loc))\n",
-                "  File \"D:\\02_software\\Python38\\lib\\unittest\\case.py\", line 548, in __str__\n    return \"%s (%s)\" % (self._testMethodName, strclass(self.__class__))\n",
-                "AttributeError: 'loginPage' object has no attribute '_testMethodName'\n",
-                "\nDuring handling of the above exception, another exception occurred:\n\n",
+                "",
                 "Traceback (most recent call last):\n",
                 "  File \"D:\\02_software\\Python38\\lib\\unittest\\case.py\", line 60, in testPartExecutor\n    yield\n",
                 "  File \"D:\\02_software\\Python38\\lib\\unittest\\case.py\", line 676, in run\n    self._callTestMethod(testMethod)\n",
                 "  File \"D:\\02_software\\Python38\\lib\\unittest\\case.py\", line 633, in _callTestMethod\n    method()\n",
-                "  File \"D:\\02_software\\Python38\\lib\\site-packages\\BeautifulReport\\BeautifulReport.py\", line 423, in __wrap\n    sys.exit(0)\n",
-                "SystemExit: 0\n"
-            ]
-        },
-        {
-            "className": "Login_page",
-            "methodName": "test_02_login_fail_0_weifeng_cai_things_matrix_com",
-            "description": "输入错误的用户名和密码登录失败 [with *args=('weifeng.cai@things-matrix.com', 'invalid_password')]",
-            "spendTime": "17.2 s",
-            "status": "成功",
-            "log": [
-                "[2021-04-28 15:36:40,733] - logger.py] - INFO: 用例:test_02_login_fail测试通过",
-                "<br></br>",
-                ""
-            ]
-        },
-        {
-            "className": "Login_page",
-            "methodName": "test_02_login_fail_1_invalid_username",
-            "description": "输入错误的用户名和密码登录失败 [with *args=('invalid_username', 'TMXtest2019')]",
-            "spendTime": "14.0 s",
-            "status": "成功",
-            "log": [
-                "[2021-04-28 15:36:55,460] - logger.py] - INFO: 用例:test_02_login_fail测试通过",
-                "<br></br>",
-                ""
-            ]
-        },
-        {
-            "className": "Login_page",
-            "methodName": "test_02_login_fail_2_",
-            "description": "输入错误的用户名和密码登录失败 [with *args=('', 'TMXtest2019')]",
-            "spendTime": "18.2 s",
-            "status": "成功",
-            "log": [
-                "[2021-04-28 15:37:13,564] - logger.py] - INFO: 用例:test_02_login_fail测试通过",
-                "<br></br>",
-                ""
+                "  File \"D:\\02_software\\Python38\\lib\\unittest\\loader.py\", line 34, in testFailure\n    raise self._exception\n",
+                "ImportError: Failed to import test module: test_login\nTraceback (most recent call last):\n  File \"D:\\02_software\\Python38\\lib\\unittest\\loader.py\", line 436, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"D:\\02_software\\Python38\\lib\\unittest\\loader.py\", line 377, in _get_module_from_name\n    __import__(name)\n  File \"D:\\04_TMXtest\\03_UItest\\tmx_UI\\test_cases\\test_login.py\", line 7, in <module>\n    from pages import LoginPage\n  File \"D:\\04_TMXtest\\03_UItest\\tmx_UI\\pages\\LoginPage.py\", line 10, in <module>\n    from mon.base_case import BaseTestCase\nModuleNotFoundError: No module named 'mon.base_case'\n\n"
             ]
         }
     ],
-    "testName": "ui自动化测试",
-    "testAll": 4,
+    "testName": "TMX系统ui自动化测试",
+    "testAll": 1,
     "testFail": 1,
-    "beginTime": "2021-04-28 15:35:09",
-    "totalTime": "129s",
+    "beginTime": "2021-04-28 18:23:36",
+    "totalTime": "0s",
     "testSkip": 0,
     "testError": 0
 };
