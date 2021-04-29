@@ -5,12 +5,8 @@
 # @Email   : weifeng.cai@things-matrix.com
 import unittest
 from BeautifulReport import BeautifulReport
-# from SendEmail import send_email
-import test_cases.test_login
-from test_cases import *
 from mon import logger
-# import readconfig
-import pytest
+
 
 
 # 测试用例模板
