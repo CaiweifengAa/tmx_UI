@@ -3,6 +3,7 @@ latest_logs
 assets
 __pycache__
 .idea
-#img/*.png
+/img/*.png
 *.log
 venv
+/HtmlReport/*html

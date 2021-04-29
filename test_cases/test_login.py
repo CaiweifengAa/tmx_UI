@@ -36,7 +36,7 @@ class Login_page(unittest.TestCase):
         self.driver.implicitly_wait(30)
         # test_Data
         self.username = "admin@things-matrix.com"
-        self.passward = "TMXtest2019"
+        self.passward = "TMXtest20191"
         self.login_success_asset = "ZR"
         self.Sign_in = "Sign In"
         self.page_title = "Home"
@@ -59,9 +59,9 @@ class Login_page(unittest.TestCase):
         try:
             login_page.login_success_asset(self.login_success_asset)
             logs.info("用例:" + sys._getframe().f_code.co_name + "测试通过")
-        except:
+        except login_page.login_success_asset(self.login_success_asset) as e:
             logs.error("用例:" + sys._getframe().f_code.co_name + "执行失败")
-            login_page.login_success_asset(self.login_success_asset)
+            logs.error(e)
 
     @parameterized.expand([("weifeng.cai@things-matrix.com", "invalid_password"),
                            ("invalid_username", "TMXtest2019"),
@@ -69,7 +69,7 @@ class Login_page(unittest.TestCase):
                            ])
     @pytest.mark.fail
     @BeautifulReport.add_test_img('test_02_login_fail')
-    # @BeautifulReport.stop  # 不执行该用例
+    @BeautifulReport.stop  # 不执行该用例
     def test_02_login_fail(self, username, pwd):
         """输入错误的用户名和密码登录失败"""
         login_page.input_username(username)
@@ -78,9 +78,10 @@ class Login_page(unittest.TestCase):
         try:
             login_page.login_F_asset(self.Sign_in)
             logs.info("用例:" + sys._getframe().f_code.co_name + "测试通过")
-        except:
+        except login_page.login_F_asset(self.Sign_in) as e:
             logs.error("用例:" + sys._getframe().f_code.co_name + "执行失败")
-            login_page.login_success_asset(self.Sign_in)
+            logs.error(e)
+            print(e)
 
 
 if __name__ == "__main__":
